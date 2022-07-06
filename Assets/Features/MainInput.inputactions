@@ -1,0 +1,94 @@
+{
+    "name": "MainInput",
+    "maps": [
+        {
+            "name": "Character",
+            "id": "c0f09098-0c69-4d6d-bddd-dcc45f87e1d0",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "PassThrough",
+                    "id": "c2719d28-4cc4-4594-b389-059850c2c933",
+                    "expectedControlType": "Vector2",
+                    "processors": "DivideVector2ByDeltaTime",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Look",
+                    "type": "PassThrough",
+                    "id": "83fbd684-83c7-4f7c-95b1-7e741aa07eef",
+                    "expectedControlType": "Vector2",
+                    "processors": "DivideVector2ByDeltaTime",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Run",
+                    "type": "Button",
+                    "id": "d6a4a5ab-adec-4cfb-b6f0-3cd5fb320f7a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "700bd51b-fd44-4a6a-bf93-2bae71e0b1d9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1aa0320a-db1a-4170-be2d-0942c1a632d8",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "DivideVector2ByDeltaTime",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "108160a3-d1dd-4239-9636-50f9e149c681",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "DivideVector2ByDeltaTime",
+                    "groups": "",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "faeb9ab5-5f0c-49af-a4cb-5026194ced0d",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Run",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5b9759cd-b97a-40a3-8eac-2cbfc5b34c57",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
