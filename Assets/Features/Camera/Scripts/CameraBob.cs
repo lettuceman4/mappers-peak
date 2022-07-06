@@ -4,6 +4,7 @@ using UnityEngine;
 using UniRx;
 using UniRx.Triggers;
 using UnityEngine.Serialization;
+
 [RequireComponent(typeof(Camera))]
 public class CameraBob : MonoBehaviour
 {
@@ -36,11 +37,12 @@ public class CameraBob : MonoBehaviour
             distance %= _characterSignals.StrideLength;
             
             // Use distance to evaluate the bob curve.
-            var magnitude = _characterSignals.IsRunning.Value ? runBobMagnitude: walkBobMagnitude; 
+            var magnitude = _characterSignals.IsRunning.Value ? runBobMagnitude : walkBobMagnitude;
             var deltaPos = magnitude * bob.Evaluate(distance /
-    _characterSignals.StrideLength) * Vector3.up;
+                _characterSignals.StrideLength) * Vector3.up;
+
             // Adjust camera position.
-            /_camera.transform.localPosition= initialPosition+ deltaPos;
+            _camera.transform.localPosition = initialPosition + deltaPos;
         }).AddTo(this);
     }
 }
